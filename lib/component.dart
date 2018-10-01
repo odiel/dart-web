@@ -1,5 +1,5 @@
 
-import './context.dart';
+import 'package:bito/context.dart';
 
 abstract class BitoComponent {
 

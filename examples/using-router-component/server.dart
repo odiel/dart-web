@@ -1,6 +1,7 @@
 import 'package:bito/framework.dart';
-import 'package:bito/src/components/router.dart';
-import 'package:bito/src/context-helper/router-helper.dart';
+
+import 'package:bito/components/router.dart';
+import 'package:bito/context-helper/router-helper.dart';
 
 main(List<String> args) async {
 

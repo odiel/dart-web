@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:bito/framework.dart';
-import 'package:bito/src/components/router/route.dart';
-import 'package:bito/src/context-helper/router-helper.dart';
+import 'package:bito/components/router/route.dart';
+import 'package:bito/context-helper/router-helper.dart';
 
 class Router extends BitoComponent {
 

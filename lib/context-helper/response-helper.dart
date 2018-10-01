@@ -1,4 +1,4 @@
-import 'package:bito/src/context.dart';
+import 'package:bito/context.dart';
 
 class ContextResponseHelper {
 

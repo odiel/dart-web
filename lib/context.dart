@@ -1,7 +1,7 @@
 
 import 'dart:io';
 
-import './service.dart';
+import 'package:bito/service.dart';
 
 class BitoContext {
 

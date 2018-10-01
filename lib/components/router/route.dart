@@ -1,6 +1,7 @@
 
-import 'package:bito/src/context.dart';
-import 'package:bito/src/context-helper/response-helper.dart';
+import 'package:bito/context.dart';
+
+import 'package:bito/context-helper/response-helper.dart';
 
 typedef RouteHandler = Function(BitoContext context);
 

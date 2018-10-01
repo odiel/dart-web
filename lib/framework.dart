@@ -1,4 +1,4 @@
 
-export 'src/bito.dart';
-export 'src/component.dart';
-export 'src/context.dart';
+export 'package:bito/bito.dart';
+export 'package:bito/component.dart';
+export 'package:bito/context.dart';
