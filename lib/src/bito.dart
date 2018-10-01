@@ -1,18 +1,19 @@
 import 'dart:io';
-import 'component.dart';
 
-import 'context.dart';
+import 'package:bito/src/component.dart';
+import 'package:bito/src/context.dart';
+import 'package:bito/src/context-helper/response-helper.dart';
 
 const DEFAULT_PORT = 3000;
 
-class App {
+class Bito {
 
   int port;
 
   InternetAddress host;
 
-  Component first;
-  Component last;
+  BitoComponent first;
+  BitoComponent last;
 
   ///
   ///
@@ -21,7 +22,7 @@ class App {
     this.host = host;
   }
 
-  use(Component component) {
+  use(BitoComponent component) {
     if (first == null) first = component;
     if (last == null) last = component;
 
@@ -43,9 +44,18 @@ class App {
               print('Server started at http://${server.address.host}:${server.port}');
 
               server.listen((HttpRequest request) {
-                Context context = new Context(request, request.response, null, null, null);
+                BitoContext context = new BitoContext(
+                    request, request.response, {}, {}, {});
 
-                first.invoke(context);
+                if (first != null) {
+                  first.invoke(context);
+                }
+
+                HttpResponse response = context.response;
+
+                if (!ContextResponseHelper.isDoNotclose(context)) {
+                  response.close();
+                }
               });
             });
 
